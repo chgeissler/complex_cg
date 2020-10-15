@@ -1,0 +1,11 @@
+{
+  "paths": {
+    "nas_dir": "/media/SERVEUR/",
+    "cache_dir": "$HOME/.cache/adactivation"
+  },
+
+  "logger_fmt": {
+    "fmt": "%(levelname)8s - %(asctime)s {context}%(message)s",
+    "datefmt": "%Y-%m-%d %H:%M:%S"
+  }
+}

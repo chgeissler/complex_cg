@@ -1,0 +1,11 @@
+{
+  "paths": {
+    "nas_dir": "/media/SERVEUR/",
+    "cache_dir": "/media/SERVEUR/research_and_development/AdActivation_(brevet_3)/Codes_with_iaresp_data/cache"
+  },
+
+  "logger_fmt": {
+    "fmt": "%(levelname)8s - %(asctime)s {context}%(message)s",
+    "datefmt": "%Y-%m-%d %H:%M:%S"
+  }
+}
