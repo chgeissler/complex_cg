@@ -96,8 +96,6 @@ class ComplexForDummies:
     def mandelbrot(self,
                    itermax: int = 100):
         z = ComplexForDummies(0, 0)
-        stop = False
-        convergence = False
         n = 0
         while abs(z) < 2.0 and n <= itermax:
             z = z.fmandel(self)

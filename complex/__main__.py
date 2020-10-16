@@ -3,7 +3,6 @@ import argparse
 from adutils import Log
 
 from .configs import load_config
-from .subdir_1.subpythonfile_1 import func1
 
 conf = load_config()
 
@@ -15,7 +14,7 @@ class Args:
     def __init__(self):
         # noinspection PyTypeChecker
         parser = argparse.ArgumentParser(
-            description="project_template",
+            description="complex",
             formatter_class=argparse.ArgumentDefaultsHelpFormatter,
         )
 
@@ -32,12 +31,11 @@ class Args:
 
     def run(self):
 
-        func1(self.theargs.arg1)
+        pass
 
 
 def main():
     args = Args()
-    args.run()
 
 
 if __name__ == "__main__":
