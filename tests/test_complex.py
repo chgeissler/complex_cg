@@ -13,3 +13,8 @@ def test_ipi():
     euler = (i * pi).exp()
     assert euler != ComplexForDummies(-1)
     assert euler.almost_eq(ComplexForDummies(-1))
+
+
+def test_conjugate():
+    i = ComplexForDummies.i()
+    assert i * i.conjugate() == ComplexForDummies(1.0)

@@ -126,6 +126,6 @@ class ComplexForDummies:
             for ib in range (n_step_b):
                z.re = a0 + ia * step
                z.im = b0 + ib * step
-               n, conv = z.mandel_iterate()
+               n, conv = z.mandelbrot()
 
         pass
