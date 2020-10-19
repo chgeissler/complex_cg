@@ -1,6 +1,8 @@
 import math
 import numpy as np
 
+tinyreal = 1e-15
+
 
 class ComplexForDummies:
     """
@@ -57,8 +59,8 @@ class ComplexForDummies:
         return ComplexForDummies(self.re - c2.re, self.im - c2.im)
 
     def __mul__(self, c2):
-        return ComplexForDummies(self.re * c2.re - self.im + c2.im,
-                                 self.re * c2.im + self.im + c2.re)
+        return ComplexForDummies(self.re * c2.re - self.im * c2.im,
+                                 self.re * c2.im + self.im * c2.re)
 
     def __truediv__(self, c2):
         if c2.re == 0 and c2.im == 0:
@@ -76,6 +78,10 @@ class ComplexForDummies:
     def exp(self):
         return ComplexForDummies(re=math.exp(self.re) * math.cos(self.im),
                                  im=math.exp(self.re) * math.sin(self.im))
+
+    def almost_eq(self, c2):
+        return abs(self.re - c2.re) <= tinyreal and \
+               abs(self.im - c2.im) <= tinyreal
 
     def polar(self):
         return self.module(), self.argument()
