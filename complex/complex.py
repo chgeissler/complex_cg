@@ -15,7 +15,7 @@ class ComplexForDummies:
 
     @classmethod
     def i(cls):
-        return ComplexForDummies(re=0, im=1)
+        return cls(re=0, im=1)
 
     @property
     def re(self):
@@ -66,8 +66,8 @@ class ComplexForDummies:
         if c2.re == 0 and c2.im == 0:
             raise ZeroDivisionError
         mc2 = c2.module()
-        return ComplexForDummies(re=(self.re * c2.re + self.im + c2.im) / mc2 / mc2,
-                                 im=(self.re * c2.im - self.im + c2.re) / mc2 / mc2)
+        return ComplexForDummies(re=(self.re * c2.re + self.im * c2.im) / mc2 / mc2,
+                                 im=(self.re * c2.im - self.im * c2.re) / mc2 / mc2)
 
     def __eq__(self, c2):
         return self.re == c2.re and self.im == c2.im
